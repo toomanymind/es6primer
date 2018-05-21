@@ -1,3 +1,5 @@
+'use strict';
+
 // parameters: FCBE14
 // selection background: A69CAF
 // JSON key: B959B9
@@ -5,21 +7,17 @@
 // desktop bgcolor: R4G83U6
 // http://www.cnblogs.com/aaronjs/p/3279314.html
 
-const inquirer = require('inquirer');
+var inquirer = require('inquirer');
 
-var questions = [
-    {
-        type: 'input',
-        name: 'name',
-        message: 'name?'
-    }
-];
-inquirer.prompt(questions).then(ans => {
-    console.log(this);
-    console.log(`My name is ${ans.name}`);
+var questions = [{
+    type: 'input',
+    name: 'name',
+    message: 'name?'
+}];
+inquirer.prompt(questions).then(function (ans) {
+    console.log(undefined);
+    console.log('My name is ' + ans.name);
 });
-
-
 
 // var a = {
 //     m: 'mmmm',
