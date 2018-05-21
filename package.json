@@ -1,0 +1,25 @@
+{
+  "name": "es6primer",
+  "version": "1.0.0",
+  "description": "es6primer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toomanymind/es6primer.git"
+  },
+  "author": "cjh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toomanymind/es6primer/issues"
+  },
+  "homepage": "https://github.com/toomanymind/es6primer#readme"
+
+
+
+
+
+
+}
