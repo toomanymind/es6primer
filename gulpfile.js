@@ -1,15 +1,40 @@
 const gulp = require('gulp'),
+    babel = require('gulp-babel'),
     rename = require('gulp-rename'),
-    babel = require('gulp-babel');
+    nodemon = require('gulp-nodemon');
+    browserSync = require('browser-sync').create(),
+    reload = browserSync.reload;
 
+
+
+const jsSrc = './*/app.js',
+    jsDest = './',
+    htmlSrc = 'index.html',
+    current = 'let_const';
+
+gulp.task('nodemon', () => {
+    var stream = nodemon({
+        script: `${current}/app.js`,
+    });
+    stream.on('start', reload);
+});
 gulp.task('babel', () =>
-    gulp.src('app.js')
+    gulp.src(jsSrc)
         .pipe(babel())
         .pipe(rename({suffix: '.babeled'}))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(jsDest))
+        .pipe(browserSync.stream())
 );
 
 gulp.task('default',['babel'], () => {
+    browserSync.init({
+        server: {
+            index: 'index.html',
+        }
+    });
 
-    gulp.watch('app.js', ['babel']);
+
+
+    gulp.watch(jsSrc, ['babel']);
+    gulp.watch(htmlSrc, reload);
 });
