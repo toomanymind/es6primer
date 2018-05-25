@@ -1,42 +1,13 @@
 /* Chapter 7 function extentions */
 
-// 1.默认参数结合结构赋值
-// 2.不能出现双重解构
-// 3.参数解构不能忽略后一个默认值
+// 默认参数在调用时动态计算
+// 带默认值得参数及其后的参数不算在length中
+// 实参在形成时有作用域，默认参数优先访问参数表中标识符
+// 参数不提升
 
+// rest只能是最后一个参数
+// rest不算在length中
 
-
-// function foo({x, y = 5}) {
-//     console.log(x, y);
-// }
-//
-// foo({});
-// foo({x:10});
-// foo({x:1,y:2});
-// foo();
-
-
-// let foo = 'outer';
-
-// function bar(func = () => foo) {
-//     let foo = 'inner';
-//     console.log(func());
-// }
-
-
-
-function f(x=1,y) {
-    return [x,y];
-}
-
-// console.log(f());
-// console.log(f(2));
-
-function f1([x, y] = [1, 2], {z: z} = {z: 3}) {
-    return x + y + z;
-}
-
-console.log(f1());
-
+(() => console.log(88888))();
 
 
