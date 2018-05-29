@@ -9,7 +9,7 @@
 
 // rest只能是最后一个参数
 // rest不算在length中
-
+// rest，(...形参)，数组形参接收逗号实参
 (function () {
   return console.log(88888);
 })();
