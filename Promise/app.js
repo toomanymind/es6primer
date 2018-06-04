@@ -27,7 +27,30 @@ function fetch(url) {
         xhr.onreadystatechange = handler;
         xhr.responseType = 'json';
         xhr.setRequestHeader('Accept', 'application/json');
-        xhr.send('user=zhang');
+        xhr.send();
+
+        function handler() {
+            if (this.readyState !== 4) {
+                return;
+            }
+            if (this.status ===200) {
+                resolve(this.response);
+            } else {
+                reject(new Error(this.statusText));
+            }
+        }
+    });
+    return promise;
+}
+function post(url, postData) {
+    let promise = new Promise((resolve, reject) => {
+        let xhr = new XMLHttpRequest();
+        xhr.open('post', url, true);
+        xhr.onreadystatechange = handler;
+        xhr.responseType = 'json';
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded;charset=utf-8");
+        xhr.setRequestHeader('Accept', 'application/json');
+        xhr.send(postData);
 
         function handler() {
             if (this.readyState !== 4) {
@@ -47,5 +70,10 @@ fetch('/train/getCode')
     .then(({value}) => fetch(`/train/getMessage?value=${value}`))
     .then(({message}) => console.log(message))
     .catch((err) => console.log(err));
+
+
+post('/train/doPost','user=Jaaaal&age=asdfafs')
+    .then(({message}) => console.log(message));
+
 
 

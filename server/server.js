@@ -12,6 +12,11 @@ const mime={
 function start(router) {
 
     let requestHandler = (req, res) => {
+        let data = '';
+
+
+
+
         let {pathname, query} = url.parse(req.url);
         let params = qs.parse(query);
 
@@ -34,8 +39,15 @@ function start(router) {
             res.write(JSON.stringify({message: `Here's your message {${params.value}}`}));
             res.end();
             return;
-        }else if (pathname == '/train/post') {
-            res.end();
+        }else if (pathname == '/train/doPost' && req.method == 'POST') {
+            req.on('data', function (chunk) {
+                data += chunk;
+            });
+            req.on('end', function () {
+                data = decodeURI(data);
+                var dataObject = qs.parse(data);
+                res.end(JSON.stringify({message: `${dataObject.user}'s post request heard.`}));
+            });
             return;
         }else if (fs.existsSync(`.${pathname}`)) {
             // console.log(mime[pathname.match(/\.\w+$/)[0]]);
@@ -48,7 +60,6 @@ function start(router) {
             return;
         }
     }
-
     http.createServer(requestHandler).listen(8888);
 
     console.log('Server started.');
