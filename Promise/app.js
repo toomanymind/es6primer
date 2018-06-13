@@ -72,8 +72,16 @@ fetch('/train/getCode')
     .catch((err) => console.log(err));
 
 
-post('/train/doPost','user=Jaaaal&age=asdfafs')
+
+
+
+
+post('/train/doPost','user=Jaaaaadsfsdfasdfl&age=asdfafs')
     .then(({message}) => console.log(message));
+
+
+
+
 
 
 
