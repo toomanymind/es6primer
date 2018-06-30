@@ -51,15 +51,8 @@ function start(router) {
             });
             return;
         }else if (pathname == '/train/doUpload' && req.method == 'POST') {
-
             upload(req,res);
-
-
-
-
-
             return;
-
         }else if (fs.existsSync(`.${pathname}`)) {
             // console.log(mime[pathname.match(/\.\w+$/)[0]]);
             res.setHeader('Content-Type', `${mime[pathname.match(/\.\w+$/)[0]]};charset=utf-8`);
@@ -80,7 +73,7 @@ function start(router) {
 
 function upload(req, res) {
     let form = new formidable.IncomingForm();//执行表单数据解析，获取其中的post参数
-    form.uploadDir = "./upload";//重要的一步
+    form.uploadDir = "upload";//重要的一步
     form.parse(req, (error, fields, {file}) => {//获取文件上传数据
         if (error) {
             res.writeHead(200, { 'Content-Type': 'text/html' });
@@ -88,12 +81,11 @@ function upload(req, res) {
             return;
         }
         //同步获取上传文件，并保存在/uploadFile下
-        fs.renameSync(`${file.path}`, `${__dirname}/upload/${random()}.jpg`);
+        // fs.renameSync(`${file.path}`, `${__dirname}/upload/${random()}.jpg`);
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.end('success');
     });
 }
-
 
 
 

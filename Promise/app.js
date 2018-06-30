@@ -48,7 +48,7 @@ function post(url, postData) {
         xhr.open('post', url, true);
         xhr.onreadystatechange = handler;
         xhr.responseType = 'json';
-        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded;charset=utf-8");
+        // xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded;charset=utf-8");
         xhr.setRequestHeader('Accept', 'application/json');
         xhr.send(postData);
 
