@@ -3,7 +3,25 @@ const http = require('http'),
     url = require('url'),
     qs = require('querystring'),
     formidable = require('formidable'),
-    random = require('./random');
+  random = require('./random');
+// interfaces data
+let initParams = require('../mock/initParams.json');
+let generatecode = require('../mock/generatecode.json');
+let voucher = require('../mock/voucher.json');
+let account = require('../mock/account.json');
+let currency = require('../mock/currency.json');
+let cashTypeAction = require('../mock/cashTypeAction.json');
+let cashierAccountAction = require('../mock/cashierAccountAction.json');
+let employee = require('../mock/employee.json');
+let salaryKind = require('../mock/salaryKind.json');
+let assist = require('../mock/assist.json');
+let reportview = require('../mock/reportview.json');
+let voucherfindLatestVoucher = require('../mock/voucherfindLatestVoucher.json');
+let reportgetIndexValue = require('../mock/reportgetIndexValue.json');
+let operatenewThirdBoardForKJ3 = require('../mock/operatenewThirdBoardForKJ3.json');
+let reportgetDataForNewPage = require('../mock/reportgetDataForNewPage.json');
+let getCommonFunctions = require('../mock/getCommonFunctions.json');
+
 
 const mime={
     '.js':'application/javascript',
@@ -19,7 +37,101 @@ function start(router) {
 
 
         let {pathname, query} = url.parse(req.url);
-        let params = qs.parse(query);
+        let {m} = qs.parse(query);
+
+      // mock
+      res.setHeader('Content-Type', 'text/html;charset=utf-8');
+      res.writeHead(200, {'Content-Type': 'text/pain'});
+      switch (pathname) {
+        case '/basedata/initParams':
+          if (m === 'getCommonFunctions') {
+            data = getCommonFunctions
+          } else {
+            data = initParams
+          }
+          res.write(JSON.stringify(data));
+          break;
+        case '/gl/voucher':
+          if (m === 'findUsedVchNO') {
+            data = voucher
+          }
+          if (m === 'findLatestVoucher') {
+            data = voucherfindLatestVoucher
+          }
+          res.write(JSON.stringify(data));
+          break;
+        case '/gl/account':
+          res.write(JSON.stringify(account));
+          break;
+        case '/gl/generatecode':
+          res.write(JSON.stringify(generatecode));
+          break;
+        case '/bs/currency':
+          res.write(JSON.stringify(currency));
+          break;
+        case '/gl/cashier/cashTypeAction':
+          res.write(JSON.stringify(cashTypeAction));
+          break;
+        case '/gl/cashier/cashierAccountAction':
+          res.write(JSON.stringify(cashierAccountAction));
+          break;
+        case '/pay/employee.do':
+          res.write(JSON.stringify(employee));
+          break;
+        case '/pay/salaryKind.do':
+          res.write(JSON.stringify(salaryKind));
+          break;
+        case '/bs/assist.do':
+          res.write(JSON.stringify(assist));
+          break;
+        case '/report/reportview':
+          res.write(JSON.stringify(reportview));
+          break;
+        case '/report/report':
+          if (m === 'getIndexValue') {
+            data = reportgetIndexValue
+          }
+          if (m === 'getDataForNewPage') {
+            data = reportgetDataForNewPage
+          }
+          res.write(JSON.stringify(data));
+          break;
+        case '/log/operate':
+          res.write(JSON.stringify(operatenewThirdBoardForKJ3));
+          break;
+        default:
+          res.write(JSON.stringify({message: 'mock fail'}));
+          break
+      }
+      res.end();
+        return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         if (pathname == '/favicon.ico') return;
         if (pathname == '/') {
@@ -64,7 +176,7 @@ function start(router) {
             return;
         }
     }
-    http.createServer(requestHandler).listen(8888);
+    http.createServer(requestHandler).listen(3000);
 
     console.log('Server started.');
 }

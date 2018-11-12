@@ -1,0 +1,22 @@
+{
+	"data": {
+		"items": [{
+				"number": "RMB",
+				"name": "人民币",
+				"id": 108179521384986,
+				"natural": true,
+				"rate": 1
+			},
+			{
+				"number": "USD",
+				"name": "美元",
+				"id": 108216226718961,
+				"natural": false,
+				"rate": 1000
+			}
+		],
+		"totalsize": 2
+	},
+	"status": 200,
+	"msg": "操作成功"
+}

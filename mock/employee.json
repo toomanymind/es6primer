@@ -1,0 +1,10 @@
+{
+	"msg": "操作成功",
+	"status": 200,
+	"data": {
+		"mobile": 0,
+		"name": 1,
+		"idenCard": 0,
+		"jobNum": 0
+	}
+}

@@ -1,0 +1,99 @@
+{
+	"data": {
+		"noAccount": {},
+		"isplbal": true,
+		"items": [{
+				"balance": "3,717.91",
+				"reportitem": "05*001",
+				"rownum": 1,
+				"id": 1,
+				"datasource": 1,
+				"formula": "",
+				"dc": 1,
+				"name": "现金",
+				"prebalance": ""
+			},
+			{
+				"balance": "15,049,508.84",
+				"reportitem": "05*002",
+				"rownum": 2,
+				"id": 2,
+				"datasource": 1,
+				"formula": "",
+				"dc": 1,
+				"name": "银行存款",
+				"prebalance": ""
+			},
+			{
+				"balance": "846,839.49",
+				"reportitem": "05*003",
+				"rownum": 3,
+				"id": 3,
+				"datasource": 1,
+				"formula": "",
+				"dc": 1,
+				"name": "存货",
+				"prebalance": ""
+			},
+			{
+				"balance": "3,333,133.45",
+				"reportitem": "05*004",
+				"rownum": 4,
+				"id": 4,
+				"datasource": 1,
+				"formula": "",
+				"dc": 1,
+				"name": "应收账款",
+				"prebalance": ""
+			},
+			{
+				"balance": "",
+				"reportitem": "05*005",
+				"rownum": 5,
+				"id": 5,
+				"datasource": 1,
+				"formula": "",
+				"dc": 1,
+				"name": "应付账款",
+				"prebalance": ""
+			},
+			{
+				"balance": "",
+				"reportitem": "05*006",
+				"rownum": 6,
+				"id": 6,
+				"datasource": 1,
+				"formula": "",
+				"dc": 1,
+				"name": "主营业务收入",
+				"prebalance": ""
+			},
+			{
+				"balance": "4,200.00",
+				"reportitem": "05*007",
+				"rownum": 7,
+				"id": 7,
+				"datasource": 1,
+				"formula": "",
+				"dc": 1,
+				"name": "销售费用",
+				"prebalance": ""
+			},
+			{
+				"balance": "-110,700.00",
+				"reportitem": "05*008",
+				"rownum": 8,
+				"id": 8,
+				"datasource": 1,
+				"formula": "",
+				"dc": 1,
+				"name": "管理费用",
+				"prebalance": ""
+			}
+		],
+		"isbal": true,
+		"isBeginBal": true
+	},
+	"msg": "操作成功",
+	"status": 200
+}

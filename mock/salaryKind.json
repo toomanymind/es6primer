@@ -1,0 +1,71 @@
+{
+	"msg": "操作成功",
+	"data": {
+		"items": [{
+				"name": "养老保险",
+				"status": 1,
+				"sortindex": 3,
+				"isrpt": 1,
+				"isDelete": 1,
+				"id": 122
+			},
+			{
+				"name": "应发工资",
+				"status": 1,
+				"sortindex": 4,
+				"isrpt": 1,
+				"isDelete": 1,
+				"id": 120
+			},
+			{
+				"name": "实发工资",
+				"status": 2,
+				"sortindex": 5,
+				"isrpt": 1,
+				"isDelete": 1,
+				"id": 121
+			},
+			{
+				"name": "医疗保险",
+				"status": 2,
+				"sortindex": 6,
+				"isrpt": 1,
+				"isDelete": 1,
+				"id": 123
+			},
+			{
+				"name": "失业保险",
+				"status": 2,
+				"sortindex": 7,
+				"isrpt": 1,
+				"isDelete": 1,
+				"id": 124
+			},
+			{
+				"name": "住房公积金",
+				"status": 2,
+				"sortindex": 8,
+				"isrpt": 1,
+				"isDelete": 1,
+				"id": 125
+			},
+			{
+				"name": "其他扣款",
+				"status": 2,
+				"sortindex": 9,
+				"isrpt": 1,
+				"isDelete": 1,
+				"id": 126
+			},
+			{
+				"name": "奖金",
+				"status": 2,
+				"sortindex": 10,
+				"isrpt": 1,
+				"isDelete": 1,
+				"id": 127
+			}
+		]
+	},
+	"status": 200
+}

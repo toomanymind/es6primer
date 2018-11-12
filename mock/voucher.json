@@ -1,0 +1,16 @@
+{
+	"data": {
+		"totalsize": 2,
+		"items": [{
+				"disPeriod": "2016年2期",
+				"yearPeriod": "201602"
+			},
+			{
+				"disPeriod": "2016年1期",
+				"yearPeriod": "201601"
+			}
+		]
+	},
+	"status": 200,
+	"msg": "操作成功"
+}

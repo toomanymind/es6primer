@@ -1,0 +1,74 @@
+{
+	"data": {
+		"totalsize": 1,
+		"items": [{
+			"RoeClass": "0.259",
+			"Operateincome": "0",
+			"OperateincomeNum": [
+				6664,
+				3100,
+				1593,
+				911,
+				1718,
+				2442
+			],
+			"Profitmargin": "0",
+			"NetprofitNum": [
+				5801,
+				3963,
+				869,
+				360,
+				867,
+				3705
+			],
+			"DebtratioRank": "",
+			"RoeDeFen": 1,
+			"Roe": "0",
+			"Netprofit": "0",
+			"DebtratioNum": [
+				27,
+				2109,
+				2946,
+				2842,
+				1547,
+				320
+			],
+			"RoeNum": [
+				7240,
+				2524,
+				3029,
+				1986,
+				955,
+				1270
+			],
+			"NetprofitDeFen": 1,
+			"OperateincomeClass": "0.317",
+			"Cscore": "2.00",
+			"RoeRank": "",
+			"DebtratioClass": "0.997",
+			"ProfitmarginDeFen": 1,
+			"DebtratioDeFen": 1,
+			"NetprofitClass": "0.406",
+			"Debtratio": "1.0000",
+			"Cscore_rank": "",
+			"OperateincomeRank": "",
+			"Dbid": "7950921923",
+			"Yearpriod": "201701",
+			"Id": 113420,
+			"ProfitmarginClass": "0.014",
+			"ProfitmarginRank": "",
+			"OperateincomeDeFen": 1,
+			"NetprofitRank": "",
+			"ProfitmarginNum": [
+				9631,
+				753,
+				1391,
+				2211,
+				3368,
+				2041
+			]
+		}]
+	},
+	"msg": "操作成功",
+	"status": 200
+}

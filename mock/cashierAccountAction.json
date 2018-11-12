@@ -1,0 +1,34 @@
+{
+	"data": {
+		"items": [{
+				"accountName": "库存现金",
+				"type": 1,
+				"cur": "RMB",
+				"name": "库存现金",
+				"accountNumber": "1001",
+				"accountId": 108179929220959,
+				"curName": "人民币",
+				"curId": 108179521384986,
+				"id": 1,
+				"bankNo": "",
+				"number": "001"
+			},
+			{
+				"accountName": "银行存款_中国银行",
+				"type": 2,
+				"cur": "RMB",
+				"name": "银行存款",
+				"accountNumber": "100201",
+				"accountId": 108179930111598,
+				"curName": "人民币",
+				"curId": 108179521384986,
+				"id": 2,
+				"bankNo": "",
+				"number": "002"
+			}
+		],
+		"totalsize": 2
+	},
+	"msg": "操作成功",
+	"status": 200
+}

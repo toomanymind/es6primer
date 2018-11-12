@@ -1,0 +1,21 @@
+{
+	"msg": "操作成功",
+	"data": {
+		"totalsize": 1,
+		"items": [{
+			"digit": 1,
+			"sortIndex": 0,
+			"prefix": "记账凭证",
+			"internalInd": "t_Voucher",
+			"defaultCode": true,
+			"beginNumber": 1,
+			"year": 0,
+			"name": "记",
+			"month": 0,
+			"date": 0,
+			"yearFormat": 0,
+			"id": 108180700656135
+		}]
+	},
+	"status": 200
+}
